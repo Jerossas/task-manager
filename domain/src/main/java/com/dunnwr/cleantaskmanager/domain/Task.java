@@ -17,6 +17,18 @@ public class Task {
         this.status = Status.PENDING;
     }
 
+    private Task(Long id, String title, String description, Status status, LocalDate dueDate){
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.status = status;
+        this.dueDate = dueDate;
+    }
+
+    public static Task restore(Long id, String title, String description, Status status, LocalDate dueDate) {
+        return new Task(id, title, description, status, dueDate);
+    }
+
     public void setId(Long id){
 
         if(id <= 0){
