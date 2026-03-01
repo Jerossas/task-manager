@@ -1,0 +1,6 @@
+rootProject.name = 'clean-task-manager'
+
+include 'domain'
+include 'application'
+include 'infrastructure'
+include 'web'
