@@ -3,7 +3,9 @@ package com.dunnwr.cleantaskmanager.persistence;
 import com.dunnwr.cleantaskmanager.domain.Status;
 import com.dunnwr.cleantaskmanager.domain.Task;
 import com.dunnwr.cleantaskmanager.domain.gateways.TaskRepository;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public class TaskRepositoryAdapter implements TaskRepository {
 
     private final SpringDataTaskRepository taskRepository;
