@@ -1,6 +1,6 @@
 package com.dunnwr.cleantaskmanager.controller;
 
-import com.dunnwr.cleantaskmanager.domain.Task;
+import com.dunnwr.cleantaskmanager.domain.models.Task;
 import com.dunnwr.cleantaskmanager.dto.CreateTaskRequest;
 import com.dunnwr.cleantaskmanager.dto.TaskResponse;
 import com.dunnwr.cleantaskmanager.usecases.UseCase;

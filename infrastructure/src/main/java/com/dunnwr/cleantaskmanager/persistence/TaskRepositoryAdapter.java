@@ -1,8 +1,8 @@
 package com.dunnwr.cleantaskmanager.persistence;
 
-import com.dunnwr.cleantaskmanager.domain.Status;
-import com.dunnwr.cleantaskmanager.domain.Task;
-import com.dunnwr.cleantaskmanager.domain.gateways.TaskRepository;
+import com.dunnwr.cleantaskmanager.domain.models.Status;
+import com.dunnwr.cleantaskmanager.domain.models.Task;
+import com.dunnwr.cleantaskmanager.domain.repositories.TaskRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository

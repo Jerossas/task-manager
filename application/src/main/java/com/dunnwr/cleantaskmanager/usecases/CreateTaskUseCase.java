@@ -1,7 +1,7 @@
 package com.dunnwr.cleantaskmanager.usecases;
 
-import com.dunnwr.cleantaskmanager.domain.Task;
-import com.dunnwr.cleantaskmanager.domain.gateways.TaskRepository;
+import com.dunnwr.cleantaskmanager.domain.models.Task;
+import com.dunnwr.cleantaskmanager.domain.repositories.TaskRepository;
 import com.dunnwr.cleantaskmanager.usecases.commands.CreateTaskCommand;
 
 public class CreateTaskUseCase implements UseCase<CreateTaskCommand, Task> {

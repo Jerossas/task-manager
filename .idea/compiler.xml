@@ -3,4 +3,14 @@
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="21" />
   </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="clean-task-manager.infrastructure" options="-parameters" />
+      <module name="clean-task-manager.infrastructure.main" options="-parameters" />
+      <module name="clean-task-manager.infrastructure.test" options="-parameters" />
+      <module name="clean-task-manager.web" options="-parameters" />
+      <module name="clean-task-manager.web.main" options="-parameters" />
+      <module name="clean-task-manager.web.test" options="-parameters" />
+    </option>
+  </component>
 </project>

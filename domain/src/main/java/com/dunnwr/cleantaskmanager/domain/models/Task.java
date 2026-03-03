@@ -1,4 +1,4 @@
-package com.dunnwr.cleantaskmanager.domain;
+package com.dunnwr.cleantaskmanager.domain.models;
 
 import java.time.LocalDate;
 
