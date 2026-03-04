@@ -4,6 +4,8 @@ import com.dunnwr.cleantaskmanager.domain.models.Task;
 import com.dunnwr.cleantaskmanager.domain.repositories.TaskRepository;
 import com.dunnwr.cleantaskmanager.usecases.commands.CreateTaskCommand;
 
+import java.time.LocalDate;
+
 public class CreateTaskUseCase implements UseCase<CreateTaskCommand, Task> {
 
     private final TaskRepository taskRepository;
@@ -18,7 +20,8 @@ public class CreateTaskUseCase implements UseCase<CreateTaskCommand, Task> {
         Task newTask = new Task(
                 command.title(),
                 command.description(),
-                command.dueDate()
+                command.dueDate(),
+                LocalDate.now()
         );
 
         return taskRepository.save(newTask);
