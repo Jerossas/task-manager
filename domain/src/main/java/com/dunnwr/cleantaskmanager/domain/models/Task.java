@@ -10,10 +10,10 @@ public class Task {
     private Status status;
     private LocalDate dueDate;
 
-    public Task(String title, String description, LocalDate dueDate){
+    public Task(String title, String description, LocalDate dueDate, LocalDate currentDate){
         changeTitle(title);
         changeDescription(description);
-        changeDueDate(dueDate);
+        changeDueDate(dueDate, currentDate);
         this.status = Status.PENDING;
     }
 
@@ -27,15 +27,6 @@ public class Task {
 
     public static Task restore(Long id, String title, String description, Status status, LocalDate dueDate) {
         return new Task(id, title, description, status, dueDate);
-    }
-
-    public void setId(Long id){
-
-        if(id <= 0){
-            throw new IllegalArgumentException("Id cannot be negative or zero");
-        }
-
-        this.id = id;
     }
 
     public Long getId(){
@@ -89,13 +80,13 @@ public class Task {
         return this.status;
     }
 
-    public void changeDueDate(LocalDate newDueDate){
+    public void changeDueDate(LocalDate newDueDate, LocalDate currentDate){
 
         if(newDueDate == null){
             throw new IllegalArgumentException("The due date cannot be null.");
         }
 
-        if(newDueDate.isBefore(LocalDate.now())){
+        if(newDueDate.isBefore(currentDate)){
             throw new IllegalArgumentException("The expiration date cannot be earlier than the current date.");
         }
 
