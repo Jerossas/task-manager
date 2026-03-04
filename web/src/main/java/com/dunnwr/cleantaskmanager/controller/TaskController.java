@@ -3,7 +3,7 @@ package com.dunnwr.cleantaskmanager.controller;
 import com.dunnwr.cleantaskmanager.domain.models.Task;
 import com.dunnwr.cleantaskmanager.dto.CreateTaskRequest;
 import com.dunnwr.cleantaskmanager.dto.TaskResponse;
-import com.dunnwr.cleantaskmanager.usecases.UseCase;
+import com.dunnwr.cleantaskmanager.usecases.CreateTaskUseCase;
 import com.dunnwr.cleantaskmanager.usecases.commands.CreateTaskCommand;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,9 +16,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/tasks")
 public class TaskController {
 
-    private final UseCase<CreateTaskCommand, Task> createTaskUseCase;
+    private final CreateTaskUseCase createTaskUseCase;
 
-    public TaskController(UseCase<CreateTaskCommand, Task> createTaskUseCase){
+    public TaskController(CreateTaskUseCase createTaskUseCase){
         this.createTaskUseCase = createTaskUseCase;
     }
 
