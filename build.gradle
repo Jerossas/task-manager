@@ -23,6 +23,7 @@ subprojects {
 
     dependencies {
         testRuntimeOnly 'org.junit.platform:junit-platform-launcher:6.0.3'
+        testImplementation 'org.junit.jupiter:junit-jupiter-api:6.0.3'
     }
 
     tasks.named('test') {
